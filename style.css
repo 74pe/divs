@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -7,23 +8,27 @@
 body {
   font-family: "PT Sans", sans-serif;
   background-color: #eee;
+  color: #222;
 }
-body section {
+
+section {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   margin-bottom: 50px;
 }
-body .ad {
+
+.ad {
   overflow: hidden;
   position: relative;
 }
-body .ad .adLabel {
+
+.ad .adLabel {
   padding: 1px 5px;
   border-radius: 6px;
   background: rgba(40, 40, 40, 0.5);
   -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   font-size: 9px;
   height: 13px;
   align-content: center;
@@ -31,8 +36,14 @@ body .ad .adLabel {
   top: 5px;
   left: 5px;
   color: white;
+  transition: 0.3s;
 }
-body .ad .infoIcon {
+
+.adLabelShow {
+  opacity: 0;
+}
+
+.ad .infoIcon {
   width: 24px;
   height: 24px;
   background: rgba(255, 250, 250, 0.5);
@@ -47,14 +58,17 @@ body .ad .infoIcon {
   cursor: pointer;
   z-index: 5;
 }
-body .ad .infoIcon:hover {
+
+.infoIcon:hover {
   background: #FFFAFA;
 }
-body .ad .infoIcon svg {
+
+.infoIcon svg {
   width: 12px;
   height: 12px;
 }
-body .ad .adMarking {
+
+.ad .adMarking {
   max-width: calc(100% - 10px);
   max-height: calc(100% - 10px);
   position: absolute;
@@ -66,52 +80,59 @@ body .ad .adMarking {
   transition: 0.3s;
   overflow: hidden;
 }
-body .ad .adMarking:not(.adMarkingHidden) {
+
+.adMarking:not(.adMarkingHidden) {
   opacity: 0;
 }
-body .ad .adMarking.adMarkingVisible {
+
+.adMarking.adMarkingVisible {
   opacity: 1;
   border-radius: 12px !important;
 }
-body .ad .adMarking.adMarkingVisible .adMarkingContent {
+
+.adMarking.adMarkingVisible .adMarkingContent {
   opacity: 1;
 }
-body .ad .adMarking.adMarkingHidden {
+
+.adMarking.adMarkingHidden {
   animation: adMarking 0.3s 1 forwards 0.3s;
 }
-body .ad .adMarking .adMarkingContent {
+
+.adMarking .adMarkingContent {
   padding: 15px;
   opacity: 0;
   box-sizing: border-box;
   transition: 0.3s;
   overflow: auto;
 }
-body .ad .adMarking .adMarkingContent::-webkit-scrollbar {
+
+.adMarkingContent::-webkit-scrollbar {
   width: 5px;
 }
-body .ad .adMarking .adMarkingContent::-webkit-scrollbar-track {
+
+.adMarkingContent::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: #eee;
   margin-top: 24px;
   margin-bottom: 12px;
 }
-body .ad .adMarking .adMarkingContent::-webkit-scrollbar-thumb {
+
+.adMarkingContent::-webkit-scrollbar-thumb {
   background: #ddd;
   border-radius: 10px;
   cursor: pointer;
 }
-body .ad .adMarking .adMarkingContent::-webkit-scrollbar-thumb:hover {
+
+.adMarkingContent::-webkit-scrollbar-thumb:hover {
   background: #ccc;
-}
-body .pink {
-  background-color: pink;
 }
 
 @keyframes adMarking {
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
-}/*# sourceMappingURL=style.css.map */
+}
