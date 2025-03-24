@@ -30,11 +30,19 @@ let colors = [
     "#ffffff"
 ];
 
+let texts = [
+    "Lorem ipsum dolor sit amet.",
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero sunt molestias, distinctio harum cumque nisi cum maxime animi sed iure nihil? Velit, maxime necessitatibus, natus, obcaecati dignissimos vero deleniti mollitia libero animi ducimus molestias. Expedita, aut quisquam? Tenetur commodi fugiat velit reiciendis, tempora esse quisquam laudantium itaque adipisci magnam nesciunt totam consequuntur officiis.",
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, iste. Vero, numquam. Consequuntur nisi, ipsum quaerat repellat laudantium modi doloremque dolorum facere quia atque alias voluptatibus recusandae vero earum dolorem beatae sequi adipisci. Tenetur commodi fugiat velit reiciendis, tempora esse quisquam laudantium itaque adipisci magnam nesciunt totam consequuntur officiis. Harum dolore ea quia voluptate quas enim excepturi incidunt repudiandae esse cupiditate reprehenderit ab quo, maiores illo recusandae expedita ullam accusantium obcaecati odit aliquid rerum est quisquam. Exercitationem dolorem aliquid assumenda obcaecati perspiciatis, accusantium iure a fugit eos autem fuga optio laudantium dolores, omnis sapiente ratione mollitia perferendis veniam adipisci in.",
+    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita quibusdam nostrum placeat praesentium commodi ipsum, doloremque error blanditiis delectus cupiditate temporibus unde, consectetur quo ab. Non eligendi numquam quae placeat necessitatibus molestias vitae itaque vero eveniet omnis soluta veritatis atque totam quis mollitia tempora iste at eos, id explicabo vel deleniti? Consequuntur doloremque quibusdam quae consectetur pariatur corrupti eum voluptatibus soluta ea numquam! Provident doloremque ut ullam delectus quam in laudantium autem ducimus quae et, sint quas consectetur omnis a, maxime ipsum iste, laborum eius fuga exercitationem rerum debitis quaerat sit iusto? Error recusandae delectus quae commodi odio. Odit praesentium ipsa corporis temporibus, laudantium ullam id corrupti possimus impedit. Hic, accusantium necessitatibus dolores est voluptatem maxime blanditiis dolor possimus delectus quaerat ducimus assumenda eaque fugiat veritatis similique quibusdam modi natus, animi doloremque mollitia quod? Nam veniam illo distinctio corrupti tempore adipisci, enim maiores voluptate sint ullam quis. Ut, tenetur porro."
+]
+
 class Banner {
-    constructor(width, height, color) {
+    constructor(width, height, color, textId) {
         this.width = width;
         this.height = height;
         this.color = color;
+        this.textId = textId;
     }
 
     createBanner() {
@@ -48,17 +56,17 @@ class Banner {
             <div class="adLabel">РЕКЛАМА</div>
             <div class="infoIcon">
                 <svg viewBox="0 0 320 320" version="1.1" width="320" height="320" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                    <path style="fill:#000000" d="M 128.001 32.011 C 127.999 25.253 130.137 18.665 134.108 13.197 C 138.08 7.728 143.683 3.656 150.11 1.568 C 156.537 -0.521 163.463 -0.521 169.89 1.568 C 176.317 3.656 181.92 7.728 185.892 13.197 C 189.863 18.665 192.001 25.253 191.999 32.011 C 192.001 38.769 189.863 45.357 185.892 50.825 C 181.92 56.293 176.317 60.365 169.89 62.454 C 163.463 64.543 156.537 64.543 150.11 62.454 C 143.683 60.365 138.08 56.293 134.108 50.825 C 130.137 45.357 127.999 38.769 128.001 32.011 Z">
+                    <path style="fill:#222222" d="M 128.001 32.011 C 127.999 25.253 130.137 18.665 134.108 13.197 C 138.08 7.728 143.683 3.656 150.11 1.568 C 156.537 -0.521 163.463 -0.521 169.89 1.568 C 176.317 3.656 181.92 7.728 185.892 13.197 C 189.863 18.665 192.001 25.253 191.999 32.011 C 192.001 38.769 189.863 45.357 185.892 50.825 C 181.92 56.293 176.317 60.365 169.89 62.454 C 163.463 64.543 156.537 64.543 150.11 62.454 C 143.683 60.365 138.08 56.293 134.108 50.825 C 130.137 45.357 127.999 38.769 128.001 32.011 Z">
                     <animate class="dotAnimation" attributeType="CSS" attributeName="opacity" 
                         from="1" dur="0.3s" fill="freeze" repeatCount="1"/>
                     </path>
-                    <path style="fill:#000000" d="M 117.335 106.675 L 160.384 106.675 C 172.095 106.675 181.524 116.104 181.524 127.815 L 181.524 128.199 C 181.524 139.911 172.095 149.34 160.384 149.34 L 117.335 149.34 C 105.623 149.34 96.194 139.911 96.194 128.199 L 96.194 127.815 C 96.194 116.104 105.623 106.675 117.335 106.675 Z">
+                    <path style="fill:#222222" d="M 117.335 106.675 L 160.384 106.675 C 172.095 106.675 181.524 116.104 181.524 127.815 L 181.524 128.199 C 181.524 139.911 172.095 149.34 160.384 149.34 L 117.335 149.34 C 105.623 149.34 96.194 139.911 96.194 128.199 L 96.194 127.815 C 96.194 116.104 105.623 106.675 117.335 106.675 Z">
                     <animate class="topSerifAnimation" dur="0.3s" repeatCount="1" fill="freeze" attributeName="d"/>
                     </path>
-                    <path style="fill:#000000" d="M 138.667 299.818 L 138.667 126.858 C 138.667 115.677 147.669 106.676 158.849 106.676 L 161.151 106.676 C 172.331 106.676 181.333 115.677 181.333 126.858 L 181.333 299.818 C 181.333 310.999 172.331 320 161.151 320 L 158.849 320 C 147.669 320 138.667 310.999 138.667 299.818 Z">
+                    <path style="fill:#222222" d="M 138.667 299.818 L 138.667 126.858 C 138.667 115.677 147.669 106.676 158.849 106.676 L 161.151 106.676 C 172.331 106.676 181.333 115.677 181.333 126.858 L 181.333 299.818 C 181.333 310.999 172.331 320 161.151 320 L 158.849 320 C 147.669 320 138.667 310.999 138.667 299.818 Z">
                     <animate class="verticalLineAnimation" dur="0.3s" repeatCount="1" fill="freeze" attributeName="d"/>
                     </path>
-                    <path style="fill:#000000" d="M 116.951 277.335 L 203.049 277.335 C 214.654 277.335 223.998 286.678 223.998 298.284 L 223.998 299.051 C 223.998 310.657 214.654 320 203.049 320 L 116.951 320 C 105.346 320 96.002 310.657 96.002 299.051 L 96.002 298.284 C 96.002 286.678 105.346 277.335 116.951 277.335 Z">
+                    <path style="fill:#222222" d="M 116.951 277.335 L 203.049 277.335 C 214.654 277.335 223.998 286.678 223.998 298.284 L 223.998 299.051 C 223.998 310.657 214.654 320 203.049 320 L 116.951 320 C 105.346 320 96.002 310.657 96.002 299.051 L 96.002 298.284 C 96.002 286.678 105.346 277.335 116.951 277.335 Z">
                     <animate class="bottomSerifAnimation" attributeType="CSS" attributeName="opacity" 
                         from="1" dur="0.3s" fill="freeze" repeatCount="1"/>
                     </path>
@@ -69,12 +77,7 @@ class Banner {
                     <h6>Реклама</h6>
                     <p>ООО AdRiver</p>
                     <p>Erid: 5UGfwMukZ5</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam facere odio, architecto illo
-                        perspiciatis eveniet pariatur delectus deserunt minima libero ut recusandae illum quos laudantium
-                        harum id exercitationem voluptas natus?</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, nihil tempore, incidunt facilis
-                        architecto aut quam provident minus, accusamus non assumenda sed accusantium? Consectetur nulla eum
-                        necessitatibus omnis provident perspiciatis.</p>
+                    <p>${texts[this.textId]}</p>
                 </div>
             </div>
         `;
@@ -82,6 +85,8 @@ class Banner {
         // Добавление баннеров одного размера в общую секцию
         let sections = document.getElementsByTagName("section");
         sections[sections.length - 1].appendChild(div);
+
+        const adLabel = div.getElementsByClassName("adLabel")[0];
 
         // Меню. Размер меню плавно меняется при открытии
         const adMarking = div.getElementsByClassName("adMarking")[0];
@@ -121,6 +126,8 @@ class Banner {
 
         // Открытие и закрытие меню
         infoIcon.onclick = () => {
+
+            adLabel.classList.toggle("adLabelShow")
 
             if (isMenuOpened) {
 
@@ -212,6 +219,6 @@ class Banner {
 for (let size of sizes) {
     document.body.appendChild(document.createElement("section"))
     for (let color of colors) {
-        new Banner(size.width, size.height, color).createBanner();
+        new Banner(size.width, size.height, color, Math.floor(Math.random()*3)).createBanner();
     }
 }
